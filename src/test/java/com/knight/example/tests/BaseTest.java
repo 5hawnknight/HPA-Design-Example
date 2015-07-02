@@ -1,4 +1,4 @@
-package com.knight.exmaple.tests;
+package com.knight.example.tests;
 
 import com.knight.exmaple.assertions.Assertions;
 import com.knight.exmaple.assertions.AssertionsImpl;

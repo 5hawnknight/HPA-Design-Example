@@ -1,4 +1,4 @@
-package com.knight.exmaple.tests;
+package com.knight.example.tests;
 
 import org.testng.annotations.Test;
 

@@ -1,4 +1,4 @@
-package com.knight.exmaple.tests;
+package com.knight.example.tests;
 
 import org.testng.annotations.Test;
 
@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
  * Created by shawn knight on 5/29/15.
  * Email: shawn.knight.work@gmail.com
  */
-public class Example404StatusCodeTest extends BaseTest
+public class Example301StatusCodeTest extends BaseTest
 {
 
     @Test
@@ -15,9 +15,9 @@ public class Example404StatusCodeTest extends BaseTest
         home()
             .navigateToStatusCodesDashboard()
         .statusCodesDashboard()
-            .navigateToStatus404()
-        .status404();
+            .navigateToStatus301()
+        .status301();
 
-        assertions().status404Assertions().verify404StatusCodeIsDisplayed();
+        assertions().status301Assertions().verify301StatusCodeIsDisplayed();
     }
 }
