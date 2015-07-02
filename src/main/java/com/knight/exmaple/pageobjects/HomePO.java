@@ -3,9 +3,8 @@ package com.knight.exmaple.pageobjects;
 import com.knight.exmaple.handlers.StatusCodesDashboardHandler;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
-
 import java.util.Arrays;
+
 
 /**
  * Created by shawn knight on 5/29/15.
@@ -21,20 +20,26 @@ public class HomePO extends PageObject implements Home
         return getHandlers().statusCodesDashboardHandler();
     }
 
-    public Home isLoaded()
+    @Override
+    public Home placeHolderMethod()
     {
-        if (isHomeNotLoaded())
-            Assert.fail("home page failed to load");
         return this;
     }
 
-    private boolean isHomeNotLoaded()
+    @Override
+    public Home placeHolderMethod2()
     {
-        return isNotLoaded(Arrays.asList(stateCodeLink));
+        return this;
     }
 
     public HomePO(WebDriver driver)
     {
         super(driver);
+    }
+
+    @Override
+    public boolean isLoaded()
+    {
+        return isLoaded(Arrays.asList(stateCodeLink));
     }
 }

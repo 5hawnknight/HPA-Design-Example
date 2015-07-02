@@ -9,7 +9,7 @@ import com.knight.exmaple.handlers.Status500Handler;
  * Created by shawn knight on 5/29/15.
  * Email: shawn.knight.work@gmail.com
  */
-public interface StatusCodesDashboard
+public interface StatusCodesDashboard extends LoadablePageObject<StatusCodesDashboard>
 {
     Status200Handler navigateToStatus200();
 
@@ -18,6 +18,4 @@ public interface StatusCodesDashboard
     Status404Handler navigateToStatus404();
 
     Status500Handler navigateToStatus500();
-
-    StatusCodesDashboard isLoaded();
 }

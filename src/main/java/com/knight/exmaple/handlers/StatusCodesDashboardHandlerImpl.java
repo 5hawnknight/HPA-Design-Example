@@ -15,7 +15,7 @@ public class StatusCodesDashboardHandlerImpl implements StatusCodesDashboardHand
     @Override
     public StatusCodesDashboard statusCodesDashboard()
     {
-        return statusCodesDashboard.isLoaded();
+        return statusCodesDashboard.get();
     }
     public StatusCodesDashboardHandlerImpl(WebDriver driver)
     {

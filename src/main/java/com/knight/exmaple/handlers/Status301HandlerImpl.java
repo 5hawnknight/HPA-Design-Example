@@ -15,7 +15,7 @@ public class Status301HandlerImpl implements Status301Handler
     @Override
     public Status301 status301()
     {
-        return status301.isLoaded();
+        return status301.get();
     }
     public Status301HandlerImpl(WebDriver driver)
     {

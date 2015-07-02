@@ -3,7 +3,6 @@ package com.knight.exmaple.pageobjects;
 import com.knight.exmaple.handlers.StatusCodesDashboardHandler;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 
 import java.util.Arrays;
 
@@ -29,21 +28,14 @@ public class Status404PO extends PageObject implements Status404
         return getDriver().findElement(statusCodeText).getText();
     }
 
-    @Override
-    public Status404 isLoaded()
-    {
-        if (isStatus404NotLoaded())
-            Assert.fail("status404 page failed to load");
-        return this;
-    }
-
-    private boolean isStatus404NotLoaded()
-    {
-        return isNotLoaded(Arrays.asList(hereLink));
-    }
-
     public Status404PO(WebDriver driver)
     {
         super(driver);
+    }
+
+    @Override
+    public boolean isLoaded()
+    {
+        return isLoaded(Arrays.asList(hereLink));
     }
 }

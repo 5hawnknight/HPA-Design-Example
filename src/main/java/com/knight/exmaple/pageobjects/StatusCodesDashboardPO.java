@@ -6,7 +6,6 @@ import com.knight.exmaple.handlers.Status404Handler;
 import com.knight.exmaple.handlers.Status500Handler;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 
 import java.util.Arrays;
 
@@ -46,21 +45,14 @@ public class StatusCodesDashboardPO extends PageObject implements StatusCodesDas
         return getHandlers().status500Handler();
     }
 
-    @Override
-    public StatusCodesDashboard isLoaded()
-    {
-        if (isStatusCodesDashboardNotLoaded())
-            Assert.fail("statusCodesDashboard page failed to load");
-        return this;
-    }
-
-    private boolean isStatusCodesDashboardNotLoaded()
-    {
-        return isNotLoaded(Arrays.asList(status200Link,status301Link,status404Link,status500Link));
-    }
-
     public StatusCodesDashboardPO(WebDriver driver)
     {
         super(driver);
+    }
+
+    @Override
+    public boolean isLoaded()
+    {
+        return isLoaded(Arrays.asList(status200Link,status301Link,status404Link,status500Link));
     }
 }

@@ -3,7 +3,6 @@ package com.knight.exmaple.pageobjects;
 import com.knight.exmaple.handlers.StatusCodesDashboardHandler;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 
 import java.util.Arrays;
 
@@ -29,14 +28,6 @@ public class Status301PO extends PageObject implements Status301
         return getDriver().findElement(statusCodeText).getText();
     }
 
-    @Override
-    public Status301 isLoaded()
-    {
-        if (isStatus301NotLoaded())
-            Assert.fail("status301 page failed to load");
-        return this;
-    }
-
     private boolean isStatus301NotLoaded()
     {
         return isNotLoaded(Arrays.asList(hereLink));
@@ -45,5 +36,11 @@ public class Status301PO extends PageObject implements Status301
     public Status301PO(WebDriver driver)
     {
         super(driver);
+    }
+
+    @Override
+    public boolean isLoaded()
+    {
+        return isLoaded(Arrays.asList(hereLink));
     }
 }

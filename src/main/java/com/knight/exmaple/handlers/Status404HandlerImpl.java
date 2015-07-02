@@ -14,7 +14,7 @@ public class Status404HandlerImpl implements Status404Handler
     @Override
     public Status404 status404()
     {
-        return status404.isLoaded();
+        return status404.get();
     }
     public Status404HandlerImpl(WebDriver driver)
     {

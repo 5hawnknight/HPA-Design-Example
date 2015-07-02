@@ -3,7 +3,6 @@ package com.knight.exmaple.pageobjects;
 import com.knight.exmaple.handlers.StatusCodesDashboardHandler;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 
 import java.util.Arrays;
 
@@ -29,21 +28,14 @@ public class Status200PO extends PageObject implements Status200
         return getDriver().findElement(statusCodeText).getText();
     }
 
-    @Override
-    public Status200 isLoaded()
-    {
-        if (isStatus200NotLoaded())
-            Assert.fail("status200 page failed to load");
-        return this;
-    }
-
-    private boolean isStatus200NotLoaded()
-    {
-        return isNotLoaded(Arrays.asList(hereLink));
-    }
-
     public Status200PO(WebDriver driver)
     {
         super(driver);
+    }
+
+    @Override
+    public boolean isLoaded()
+    {
+        return isLoaded(Arrays.asList(hereLink));
     }
 }

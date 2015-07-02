@@ -8,5 +8,5 @@ import com.knight.exmaple.pageobjects.Home;
  */
 public interface HomeHandler
 {
-    Home home();
+   Home home();
 }

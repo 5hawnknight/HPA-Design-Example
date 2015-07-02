@@ -15,7 +15,7 @@ public class Status500HandlerImpl implements Status500Handler
     @Override
     public Status500 status500()
     {
-        return status500.isLoaded();
+        return status500.get();
     }
     public Status500HandlerImpl(WebDriver driver)
     {

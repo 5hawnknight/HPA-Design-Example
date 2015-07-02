@@ -15,7 +15,7 @@ public class HomeHandlerImpl implements HomeHandler
     @Override
     public Home home()
     {
-        return home.isLoaded();
+        return home.get();
     }
     public HomeHandlerImpl(WebDriver driver)
     {

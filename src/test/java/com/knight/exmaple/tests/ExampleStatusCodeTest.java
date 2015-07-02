@@ -13,6 +13,8 @@ public class ExampleStatusCodeTest extends BaseTest
     public void test()
     {
         home()
+            .placeHolderMethod().andThen()
+            .placeHolderMethod2().andThen()
             .navigateToStatusCodesDashboard()
         .statusCodesDashboard()
             .navigateToStatus200()

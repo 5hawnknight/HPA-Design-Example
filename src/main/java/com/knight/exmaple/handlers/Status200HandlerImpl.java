@@ -15,7 +15,7 @@ public class Status200HandlerImpl implements Status200Handler
     @Override
     public Status200 status200()
     {
-        return status200.isLoaded();
+        return status200.get();
     }
     public Status200HandlerImpl(WebDriver driver)
     {
