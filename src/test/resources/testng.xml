@@ -4,27 +4,27 @@
 <suite name="Example Test Suite" thread-count="1">
     <test name="Example 200 Test">
         <classes>
-            <class name="com.knight.exmaple.tests.Example200StatusCodeTest" />
+            <class name="com.knight.example.tests.Example200StatusCodeTest" />
         </classes>
     </test>
     <test name="Example 301 Test">
         <classes>
-            <class name="com.knight.exmaple.tests.Example301StatusCodeTest" />
+            <class name="com.knight.example.tests.Example301StatusCodeTest" />
         </classes>
     </test>
     <test name="Example 404 Test">
         <classes>
-            <class name="com.knight.exmaple.tests.Example404StatusCodeTest" />
+            <class name="com.knight.example.tests.Example404StatusCodeTest" />
         </classes>
     </test>
     <test name="Example 500 Test">
         <classes>
-            <class name="com.knight.exmaple.tests.Example500StatusCodeTest" />
+            <class name="com.knight.example.tests.Example500StatusCodeTest" />
         </classes>
     </test>
     <test name="Example Status Code Test">
         <classes>
-            <class name="com.knight.exmaple.tests.ExampleStatusCodeTest" />
+            <class name="com.knight.example.tests.ExampleStatusCodeTest" />
         </classes>
     </test>
 </suite>
